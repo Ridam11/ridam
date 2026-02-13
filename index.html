@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ridam Acharya</title>
+  <style>
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #142d46, #0f1b2d);
+      color: #ccc;
+      scroll-behavior: smooth; 
+      line-height: 1.6;
+    }
+
+  
+    nav {
+      position: sticky;
+      top: 0;
+      background: #111827;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #7c3aed;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #7c3aed;
+      color: #fff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #7c3aed;
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, #7c3aed, #4c1d95);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: white;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    #home h1 span {
+      color: #7c3aed;
+    }
+
+    #home p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #b0bec5;
+    }
+
+    #home .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    #home button {
+      background-color: #7c3aed;
+      border: none;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #home button.secondary {
+      background: transparent;
+      border: 2px solid #7c3aed;
+      color: #7c3aed;
+    }
+
+    #home button:hover {
+      background-color: #5a23b8;
+    }
+
+    #home button.secondary:hover {
+      background-color: #7c3aed;
+      color: white;
+    }
+
+    /* Cards */
+    .cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1f2937;
+      border-radius: 15px;
+      padding: 2rem;
+      max-width: 400px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 0 20px #7c3aed44;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #c7d2fe;
+    }
+
+    .card strong {
+      display: block;
+      margin-top: 1rem;
+      color: #a5b4fc;
+    }
+
+    /* About Section */
+    #about p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #b0bec5;
+      text-align: center;
+    }
+
+    /* Skills Section */
+    .skill {
+      background: #1f2937;
+      border-radius: 15px;
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px #7c3aed33;
+    }
+
+    .skill-name {
+      color: #c7d2fe;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-bar {
+      background: #374151;
+      border-radius: 9999px;
+      height: 12px;
+      overflow: hidden;
+    }
+
+    .skill-level {
+      height: 100%;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #7c3aed, #4c1d95);
+    }
+
+    /* Skill widths */
+    .skill-html .skill-level { width: 90%; }
+    .skill-css .skill-level { width: 85%; }
+    .skill-js .skill-level { width: 75%; }
+    .skill-react .skill-level { width: 65%; }
+    .skill-ai .skill-level { width: 70%; }
+
+    /* Contact Section */
+    #contact p {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #b0bec5;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Ridam Acharya</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Building <span>Tomorrow's Technology Today</span></h1>
+    <p>Passionate about web development, design, AI exploration, and creating simple but useful digital solutions. Currently learning and building projects while pursuing my degree in Kathmandu.</p>
+    <div class="buttons">
+      <button>View My Work</button>
+      <button class="secondary">Get in Touch</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated student and tech enthusiast with a keen interest in web development, user-centered design, and artificial intelligence. I love building projects that blend creativity and functionality, always striving to learn and improve my skills.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Secondary Education Examination (SEE)</h3>
+        <p>Sacred Heart Secondary School</p>
+        <strong>Grade: A+</strong>
+      </div>
+      <div class="card">
+        <h3>+2 Science</h3>
+        <p>Xavier International College</p>
+        <strong>Ongoing</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill skill-html">
+      <div class="skill-name">HTML</div>
+      <div class="skill-bar"><div class="skill-level"></div></div>
+    </div>
+    <div class="skill skill-css">
+      <div class="skill-name">CSS</div>
+      <div class="skill-bar"><div class="skill-level"></div></div>
+    </div>
+    <div class="skill skill-js">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar"><div class="skill-level"></div></div>
+    </div>
+    <div class="skill skill-react">
+      <div class="skill-name">React</div>
+      <div class="skill-bar"><div class="skill-level"></div></div>
+    </div>
+    <div class="skill skill-ai">
+      <div class="skill-name">AI & Machine Learning</div>
+      <div class="skill-bar"><div class="skill-level"></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Responsive single-page portfolio built with HTML, CSS, and JavaScript featuring modern design and scroll-snap navigation.</p>
+      </div>
+      <div class="card">
+        <h3>Mini Game using Scratch</h3>
+        <p>Interactive game developed using Scratch programming environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can add your contact details or a contact form here.</p>
+  </section>
+
+</body>
+</html>
